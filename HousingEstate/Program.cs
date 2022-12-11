@@ -12,6 +12,12 @@ namespace HousingEstate
         {
             Person Janko_Kolenik = new Person("Janko", "Kolenik", 43 );
             Console.WriteLine(Janko_Kolenik);
+
+            
+
+            Flat naKycerke = new Flat(420, 69, 4);
+            Console.WriteLine(naKycerke);
+            
         }
     }
 }
