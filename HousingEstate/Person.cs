@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HousingEstate
 {
-    internal class Person
+    public class Person
     {
         private string name;
         private string surname;
@@ -22,9 +22,10 @@ namespace HousingEstate
             this.surname = surname;
             this.age = age;
         }
+
         public override string ToString()
         {
-            return String.Format($"{name}\n{surname}\n{age}");
+            return String.Format($"\nName: {name}\nSurname: {surname}\nAge: {age}");
         }
 
 

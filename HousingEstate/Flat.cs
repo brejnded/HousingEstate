@@ -7,13 +7,13 @@ using System.Xml.Linq;
 
 namespace HousingEstate
 {
-    internal class Flat
+    public class Flat
     {
         private int numberOfFlat;
         private int areaOfFlat;
         private int numberOfRooms;
 
-        private static List<Person> inhabitantsList = new List<Person>();
+        private List<Person> inhabitantsList = new List<Person>();
         public List<Person> InhabitantsList
         {
             get { return inhabitantsList; }
@@ -25,10 +25,20 @@ namespace HousingEstate
             this.areaOfFlat = areaOfFlat;
             this.numberOfRooms = numberOfRooms;
         }
+        public void AddHabitant(Person person)
+        {
+            inhabitantsList.Add(person);
+        }
         public override string ToString()
         {
-            return String.Format($"\n{numberOfFlat}\n{areaOfFlat}\n{numberOfRooms}");
+            return String.Format($"\nNumber of flat: {numberOfFlat}\nArea of flat: {areaOfFlat}\nNumber of rooms: {numberOfRooms}");
         }
 
+     /*   public void GetInfoAboutAllHabitants(Person p, Flat f)
+        {
+            foreach (Person person in inhabitantsList)
+            {
+                Console.WriteLine();
+            }*/
+        }
     }
-}
